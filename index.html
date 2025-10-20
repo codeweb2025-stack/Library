@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Login</title>
+
+    <!-- ✅ Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ✅ Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- طبقة شفافة فوق الخلفية -->
+    <div class="overlay"></div>
+
+    <!-- النموذج -->
+    <div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
+        <div class="card form-card shadow-lg p-4 text-center">
+            <!-- شعار المكتبة -->
+            <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Library Book Logo" class="library-logo mb-3">
+
+
+            <h2 class="fw-bold mb-1">Welcome to the Library</h2>
+            <p class="text-light-50 mb-4">Your Digital Reading Space</p>
+
+            <form action="about.html" method="post" id="libraryForm">
+                <div class="mb-3 text-start">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="mb-3 text-start">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="mb-3 text-start">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Enter your password"
+                        required>
+                </div>
+
+                <div class="mb-3 text-start">
+                    <label class="form-label">Age</label>
+                    <input type="number" class="form-control" name="age" placeholder="Enter your age" min="1" max="120"
+                        required>
+                </div>
+
+                <div class="mb-3 text-start">
+                    <label class="form-label">Date & Time</label>
+                    <input type="datetime-local" class="form-control" name="datetime" required>
+                </div>
+
+                <div class="mb-3 text-start">
+                    <label class="form-label d-block">Gender</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="male">
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="female" checked>
+                        <label class="form-check-label">Female</label>
+                    </div>
+                </div>
+
+                <div class="mb-4 text-start">
+                    <label class="form-label">Country</label>
+                    <select class="form-select" name="country">
+                        <optgroup label="ENGLISH">
+                            <option>France</option>
+                            <option>Germany</option>
+                        </optgroup>
+                        <optgroup label="ARABIC">
+                            <option selected>Egypt</option>
+                            <option>KSA</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-warning px-4">Login</button>
+                    <button type="reset" class="btn btn-outline-light px-4">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ✅ Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
